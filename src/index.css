@@ -1,0 +1,48 @@
+body {
+  margin: 0px;
+}
+table {
+  overflow: hidden;
+  display: inline-block;
+}
+
+td,
+th {
+  overflow: visible !important;
+  position: relative;
+  z-index: 50;
+  opacity: 90%;
+}
+.hover-cell:hover {
+  opacity: 100%;
+  z-index: 0;
+}
+.hover-row:hover {
+  filter: contrast(0.9);
+}
+.hover-cell:hover {
+  filter: contrast(1.5);
+}
+/*.hover-cell:hover::before {
+  background-color: #555;
+  content: "";
+  height: 100%;
+  left: -5000px;
+  position: absolute;
+  top: 0;
+  width: 10000px;
+  z-index: 50;
+  opacity: 25%;
+}*/
+
+.hover-cell:hover::after {
+  background-color: #555;
+  content: "";
+  height: 10000px;
+  left: 0;
+  position: absolute;
+  top: -5000px;
+  width: 100%;
+  z-index: 50;
+  opacity: 25%;
+}
